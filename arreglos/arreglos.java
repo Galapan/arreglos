@@ -1,7 +1,8 @@
-
 import java.util.Scanner;
 
 public class arreglos{
+
+    public static int T = 20; //tamaño máximo del grupo
 
     public static void leerCalificaciones(){
 
@@ -12,7 +13,11 @@ public class arreglos{
     }
 
     public static void main(String[] args) {
-        double[] calificaciones = new double[5];
+        double[] parcial1, parcial2, parcial3, parcial4; //Solo declarando arreglos
+        double[] promInd;
+        boolean[] aprobados;
+
+        double[] calificaciones = new double[5]; //declarando y construyendo un arreglo
         Scanner sc = new Scanner(System.in);
         for(int i=0;i<calificaciones.length; i++){
             System.out.println("Ingresa califiación [" + i + "]: ");
