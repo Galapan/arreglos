@@ -39,9 +39,12 @@ public class PracticaNumeros {
     }
 
     public static void main(String[] args) {
+        int[] numeros, parImpar; 
+        int divisor, divisibles;
+        double media;
         Scanner sc = new Scanner(System.in);
 
-        int[] numeros = new int[20];
+        numeros = new int[20];
         rellenarNumeros(numeros);
 
         System.out.println("Números en el arreglo:");
@@ -50,16 +53,16 @@ public class PracticaNumeros {
         }
         System.out.println();
 
-        double media = calcularMedia(numeros);
+        media = calcularMedia(numeros);
         System.out.println("La media de los números es: " + media);
 
-        int[] parImpar = contarParImpar(numeros);
+        parImpar = contarParImpar(numeros);
         System.out.println("Pares: " + parImpar[0]);
         System.out.println("Impares: " + parImpar[1]);
 
         System.out.println("Ingrese un número para verificar divisibilidad:");
-        int divisor = sc.nextInt();
-        int divisibles = contarDivisibles(numeros, divisor);
+        divisor = sc.nextInt();
+        divisibles = contarDivisibles(numeros, divisor);
         System.out.println("Cantidad de números divisibles entre " + divisor + ": " + divisibles);
 
         sc.close();
